@@ -1,0 +1,20 @@
+{
+  "name": "hashprimer",
+  "version": "1.0.3",
+  "description": "Simple and effective way to assign values to a javascript object from an array of keys with builtin callbacks available for upserting arrays and incrementing counters",
+  "main": "hashprimer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/xogroup/hashprimer"
+  },
+  "keywords": [
+    "javascript",
+    "hash",
+    "(es5)"
+  ],
+  "author": "rajendra prashad",
+  "license": "GPL-2.0"
+}
