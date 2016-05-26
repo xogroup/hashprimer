@@ -30,7 +30,7 @@ hashprimer.prototype.set = function(hash, value, keys, func) {
     }
     return hash;
   }
-  if (!func) {
+  if (typeof(func) == 'undefined') {
     return value;
   }
   else {

@@ -1,6 +1,6 @@
 {
   "name": "hashprimer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple and effective way to assign values to a javascript object from an array of keys with builtin callbacks available for upserting arrays and incrementing counters",
   "main": "hashprimer.js",
   "scripts": {
@@ -13,8 +13,18 @@
   "keywords": [
     "javascript",
     "hash",
-    "(es5)"
+    "es6",
+    "Object.assign"
   ],
-  "author": "rajendra prashad",
-  "license": "GPL-2.0"
+  "author": {
+    "name": "rajendra prashad"
+  },
+  "license": "GPL-2.0",
+  "readme": "# hashprimer\r\n\r\nA javascript library for creating or updating javscript objects {} from an Array of key values.\r\n\r\nA few builtin callbacks are available with this release:\r\n\r\n```sh\r\nhashprimer.increment : increment numerical value\r\nhashprimer.array : create/append value to array\r\n```\r\n\r\n# Usage Example\r\n\r\n```javascript\r\nvar hashprimer = require('hashprimer');\r\nvar hash = new hashprimer();\r\n\r\nvar OS = {};\r\nhash.set(OS, 0.155, [ \"AWS\", \"us-east-1a\", \"c4.xlarge\", \"cost\" ]);\r\nhash.set(OS, null, [ \"AWS\", \"us-east-1a\", \"c4.xlarge\", \"count\" ], hash.increment);\r\nhash.set(OS, 10, [ \"AWS\", \"us-east-1a\", \"c4.xlarge\", \"count\" ], hash.increment);\r\nhash.set(OS, 'i-a1b2b3c4', [ \"AWS\", \"us-east-1a\", \"c4.xlarge\", \"instances\" ], hash.array);\r\nhash.set(OS, 'i-a4b3b2c1', [ \"AWS\", \"us-east-1a\", \"c4.xlarge\", \"instances\" ], hash.array);\r\nhash.set(OS, null, [ \"AWS\", \"us-east-1a\", \"c4.xlarge\", \"monthly_charge\" ], function(hash, value) {\r\n  return (OS.AWS['us-east-1a']['c4.xlarge'].cost * OS.AWS['us-east-1a']['c4.xlarge'].count * 24 * 30);\r\n});\r\n\r\nconsole.log(JSON.stringify(OS));\r\n\r\n```\r\n\r\n# Example Output\r\n\r\n```\r\n{\r\n    \"AWS\": {\r\n        \"us-east-1a\": {\r\n            \"c4.xlarge\": {\r\n                \"cost\": 0.155,\r\n                \"count\": 11,\r\n                \"instances\": [\r\n                    \"i-a1b2b3c4\",\r\n                    \"i-a4b3b2c1\"\r\n                ],\r\n                \"monthly_charge\": 1227.6000000000001\r\n            }\r\n        }\r\n    }\r\n}\r\n```\r\n\r\n### Version\r\n1.0.4\r\n\r\n### Installation\r\n\r\n```sh\r\n$ npm install hashprimer --save\r\n```\r\n### Development\r\n\r\nWant to contribute? Great!\r\n\r\n - Write Tests\r\n - Add Code Comments\r\n\r\nLicense\r\n----\r\n\r\nGPLv2\r\n\r\n",
+  "readmeFilename": "README.md",
+  "gitHead": "53934c80ecbf5e70322a5694dd3ed15541e7aa45",
+  "_id": "hashprimer@1.0.4",
+  "_shasum": "86b7e50c629fa09fc9a3b774494524c5e7f13b9c",
+  "_from": "hashprimer@*",
+  "_resolved": "file:git/hashprimer"
 }
