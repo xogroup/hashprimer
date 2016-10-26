@@ -4,7 +4,7 @@
   "description": "Simple and effective way to assign values to a javascript object from an array of keys with builtin callbacks available for upserting arrays and incrementing counters",
   "main": "hashprimer.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/.bin/tape test.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
   "_id": "hashprimer@1.0.4",
   "_shasum": "86b7e50c629fa09fc9a3b774494524c5e7f13b9c",
   "_from": "hashprimer@*",
-  "_resolved": "file:git/hashprimer"
+  "_resolved": "file:git/hashprimer",
+  "devDependencies": {
+    "tape": "^4.6.2"
+  }
 }
