@@ -1,6 +1,6 @@
 {
   "name": "hashprimer",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Simple and effective way to assign values to a javascript object from an array of keys with builtin callbacks available for upserting arrays and incrementing counters",
   "main": "hashprimer.js",
   "scripts": {
