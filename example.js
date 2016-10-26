@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 
-var hashprimer = require('hashprimer');
+var hashprimer = require('./hashprimer');
 var hash = new hashprimer();
 
 var OS = {};
