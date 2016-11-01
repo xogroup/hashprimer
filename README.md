@@ -50,22 +50,16 @@ console.log(JSON.stringify(OS));
 ```
 
 ### Version
-1.0.4
+1.0.5
 
 ### Installation
 
 ```sh
 $ npm install hashprimer --save
 ```
-### Development
+### Contributions Welcome
 
-Want to contribute? Great!
+[Please see general info on contributions and conduct etc.](https://github.com/xogroup/contrib/blob/master/README.md)
 
- - Write Tests
- - Add Code Comments
 
-License
-----
-
-GPLv2
 
